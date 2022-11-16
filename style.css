@@ -16,10 +16,23 @@ button{
     border-style: none;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a > *:hover {
+    text-decoration:none; 
+    cursor:pointer;  
+    transform: scale(1.1);
+    margin-left: 12px;
+}
+
+
 #content{
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr repeat(3, 2fr);
+    grid-template-columns: 1fr repeat(3, minmax(250px, 2fr));
     grid-template-rows: 1fr 2fr 2fr;
 }
 
@@ -110,7 +123,9 @@ header{
 #project-container{
     grid-column: 2 / 4;
     grid-row: 2 / 4;
-    overflow: hidden;
+
+    overflow: scroll;
+    overflow: auto;
 }
 
 #project-container h3{
@@ -163,7 +178,7 @@ nav{
     border: 1px solid black; /*debugging */
 }
 
-.logo>img{
+.logo img{
     width: 30px;
     height: 30px;
 }
