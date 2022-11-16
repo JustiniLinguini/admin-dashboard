@@ -28,6 +28,7 @@ a > *:hover {
     margin-left: 12px;
 }
 
+/*page layout*/
 
 #content{
     height: 100%;
@@ -36,9 +37,11 @@ a > *:hover {
     grid-template-rows: 1fr 2fr 2fr;
 }
 
+
 /*Header styling */
 
 header{ 
+    background-color: white;
     grid-row: 1 / 2;
     grid-column: 2 / 5;
     border: 1px solid black; /*debugging */
@@ -76,7 +79,7 @@ header{
     border-radius: 25px;
     flex-grow: 1;
     border: solid 1px black;
-    background-color: lightgray;
+    background-color: #e2e8f0;
     height: 30px;
 }
 
@@ -121,9 +124,9 @@ header{
 
 /*Projects content styling*/
 #project-container{
+    background-color: #e2e8f0;
     grid-column: 2 / 4;
     grid-row: 2 / 4;
-
     overflow: scroll;
     overflow: auto;
 }
@@ -133,14 +136,14 @@ header{
     margin-bottom: 12px;
 }
 #project-container h2{
-    margin-left: 48px;
+    margin-left: 36px;
 }
 
 #projects{
     font-size: small;
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: repeat(3, 200px);
     gap: 24px;
     margin: 24px;
@@ -154,13 +157,49 @@ header{
 }
 
 
-
+/*announcement card styling */
 
 #announcements{
     grid-column: 4 / 5;
     grid-row: 2 / 3;
     border: 1px solid black; /*debugging */
+
+    background-color: #e2e8f0;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+    place-content: center;
+    align-items: center;
 }
+
+#announcements h2{
+    margin: 0;
+    margin-left: 16px;
+}
+#announcements h4{
+    margin: 0;
+}
+
+.card{
+    background-color: white;
+    border-radius: 25px;
+    padding: 24px;
+    margin-top: 7px;
+    font-size: small;
+}
+
+hr{
+    border: 2px solid rgba(226, 232, 240, .5);
+    border-radius: 5px;
+    margin: 12px;
+}
+
+
+/*trending card styling */
 
 #trending{
     grid-column: 4 / 5;
