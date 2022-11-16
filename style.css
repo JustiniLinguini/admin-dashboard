@@ -17,6 +17,8 @@ h1{
     margin: 0;
 }
 button{
+    font-weight: bold;
+    color: white;
     border-style: none;
 }
 
@@ -48,10 +50,9 @@ header{
     background-color: white;
     grid-row: 1 / 2;
     grid-column: 2 / 5;
-    border: 1px solid black; /*debugging */
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: minmax(1fr, 100px) 100px
+    grid-template-rows: minmax(1fr, 100px) 100px;
 }
 
 
@@ -108,9 +109,10 @@ header{
     display: flex;
     gap: 24px;
     justify-content: center;
-    align-items: center;
 }
 #button-tray button{
+    margin-top: auto;
+    margin-bottom: 12px;
     height: 40px;
     width: 125px;
     border-radius: 25px;
@@ -122,7 +124,7 @@ header{
 }
 
 #button-tray button:hover{
-    border: solid 1px black;
+    transform: scale(1.1);
 }
 
 
@@ -158,10 +160,11 @@ header{
 }
 
 #projects div{
-    background-color: #f9a8d4;
+    background-color: white;
     border-radius: 25px;
     padding: 24px;
     text-overflow: ellipsis;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.44);
 }
 
 
@@ -170,7 +173,6 @@ header{
 #announcements{
     grid-column: 4 / 5;
     grid-row: 2 / 3;
-    border: 1px solid black; /*debugging */
 
     background-color: #e2e8f0;
     padding-left: 24px;
@@ -194,6 +196,7 @@ header{
     border-radius: 25px;
     padding: 24px;
     font-size: small;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.44);
 }
 
 hr{
@@ -208,7 +211,6 @@ hr{
 #trending{
     grid-column: 4 / 5;
     grid-row: 3 / 4;
-    border: 1px solid black; /*debugging */
 
     background-color: #e2e8f0;
     padding-left: 24px;
@@ -235,6 +237,22 @@ hr{
     height: 50px;
 }
 
+.trending-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#trending #share{
+    width: 25px;
+    height: 25px;
+}
+
+#trending p{
+    opacity: 60%;
+}
+
+
 
 
 
@@ -245,7 +263,6 @@ nav{
     color: white;
     grid-column: 1 / 2;
     grid-row: 1 / 4;
-    border: 1px solid black; /*debugging */
 }
 
 .logo img{
