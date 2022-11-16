@@ -27,7 +27,14 @@ a {
     text-decoration: none;
 }
 
-a > *:hover {
+nav a > *:hover {
+    text-decoration:none; 
+    cursor:pointer;  
+    transform: scale(1.1);
+    margin-left: 12px;
+}
+
+#trending a > *:hover {
     text-decoration:none; 
     cursor:pointer;  
     transform: scale(1.1);
@@ -155,16 +162,34 @@ header{
     display: grid;
     place-content: center;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-template-rows: repeat(3, 200px);
+    grid-template-rows: repeat(auto, minmax(200px, 1fr));
     gap: 24px;
 }
 
-#projects div{
+#projects .project{
     background-color: white;
     border-radius: 25px;
     padding: 24px;
     text-overflow: ellipsis;
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.44);
+}
+
+.project-icon-container{
+    margin: 12px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.project-icon-container img{
+    height: 25px;
+    width: 25px;
+}
+
+.project-icon-container a:hover{
+    text-decoration:none; 
+    cursor:pointer;  
+    transform: scale(1.1);
 }
 
 
